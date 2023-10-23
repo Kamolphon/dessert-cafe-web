@@ -42,7 +42,6 @@
 .navbar-bg {
     background: linear-gradient(to left, rgb(248 113 113 /0.8), rgb(244 114 182/0.8));
     color: white;
-    font-weight: lighter;
 }
 
 .text-gradient,
@@ -107,7 +106,6 @@
 
 .navbar {
     margin-right: 0.5rem;
-    text-decoration: underline;
 }
 
 .viewnavpage {
