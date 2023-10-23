@@ -26,7 +26,7 @@ function App() {
   return (
     <div className='w-full'>
       <Navbar />
-      <div className='viewnavpage md:mt-24 mt-3 mx-20 animate__animated animate__fadeIn relative'>
+      <div className='viewnavpage md:mt-24 mt-3 mx-20 animate__animated animate__fadeIn'>
         {
           restaurant.map(restaurant => (
             <div key={restaurant.restaurantId} className='flex flex-col justify-center items-center md:flex-row'>
