@@ -5,7 +5,7 @@ function About() {
   return (
     <div className='h-full w-full'>
         <Navbar />
-        <div className='flex justify-center items-center h-full animate__animated animate__fadeIn md:absolute top-0 bottom-0 left-0 right-0 -z-10'>
+        <div className='viewnavpage h-full animate__animated animate__fadeIn md:absolute'>
         <div className='flex flex-col md:w-1/2 w-full mx-5 md:mx-0 md:mt-0'>
           <div>
             <h1 className='about-cafe md:mb-5 md:text-5xl'>About Our Café</h1>
