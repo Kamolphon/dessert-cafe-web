@@ -88,14 +88,9 @@
   }
 
 .menucard:hover {
-    background-color: rgb(252 231 243 / 0.4);
-    transform: scale(1);
-    transform: translateY(-0.9375rem);
+    background-color: rgb(252 231 243 / 0.7);
 }
 
-.menucard:active{
-    background-color: rgb(249 168 212/0.4);
-}
 
 .discount {
     color: #e53e3e;
