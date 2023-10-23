@@ -38,7 +38,7 @@ function App() {
                   <p className='text-gradient md:text-6xl text-3xl'>{restaurant.restaurantName}</p>
                 </div>
                 <div>
-                  <div className='md:mb-10 mb-5 md:text-xl text-sm font-light'>
+                  <div className='md:mb-10 mb-5 md:text-xl qoute-hompage'>
                     <p>Life is a little sweeter when you can savor a café that pampers you with the indulgence of ice cream, the delight of cake, and the coolness of milkshakes. </p>
                   </div>
                   <div className='text-gradient md:text-2xl text-lg'>

@@ -60,8 +60,8 @@ function AllMenu() {
     }
 
 
-    function findTopSellingMenus(sold: number) {
-        if (allmenu !== null) {
+    function findTopSellingMenus(sold: number | undefined) {
+        if (sold !== undefined && allmenu !== null) {
             const uniqueSoldCounts = Array.from(new Set(allmenu.map(menu => menu.sold)));
             if (uniqueSoldCounts.length === 1) {
                 return false;
@@ -140,7 +140,7 @@ function AllMenu() {
                             </div>
                         </div>
                     ))}
-                <ModalContext.Provider value={{ togglePopup, isPopupVisible, selectedMenu }}>
+                <ModalContext.Provider value={{ togglePopup, isPopupVisible, selectedMenu, findTopSellingMenus}}>
                     <ModalMenu />
                 </ModalContext.Provider>
             </div>

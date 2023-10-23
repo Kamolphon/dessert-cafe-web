@@ -2,11 +2,13 @@ import { createContext, useContext, useState } from "react";
 import { MenuItem } from "../../interface/interface";
 import NoFoodImage from '../../../public/img/NoFood.jpg';
 import Close from "../../../public/icons/close.svg"
+import BestSeller from "../../../public/icons/BestSeller.png"
 
 interface ModalContextProps {
     togglePopup: () => void;
     isPopupVisible: boolean;
     selectedMenu: MenuItem | null;
+    findTopSellingMenus: (sold: number | undefined) => boolean | undefined;
 }
 
 //create context ในfileที่ต้องการรับมา
@@ -19,8 +21,8 @@ export function useModal() {
     return context;
 }
 
-function ModalMenu({ }) {
-    const { togglePopup, isPopupVisible, selectedMenu } = useModal();
+function ModalMenu() {
+    const { togglePopup, isPopupVisible, selectedMenu, findTopSellingMenus } = useModal();
     const [selectedChoices, setSelectedChoices] = useState<Record<string, { choice: string, menu: string } | null>>({});
     const [showLargeImage, setShowLargeImage] = useState(false);
 
@@ -118,12 +120,18 @@ function ModalMenu({ }) {
                             }
                         </div>
                         <div className='text-xs h-4 ml-2 xl:text-base mt-2 flex items-end justify-end mx-5 2xl:h-10 mb-3 '>
-                            <p className='mr-3 ml-2 text-white bg-pink-400 rounded-full py-1 px-2'>sold: {selectedMenu?.sold}</p>
-                        </div>
+                            {findTopSellingMenus(selectedMenu?.sold) ? (
+                                <>
+                                    <img src={BestSeller} alt="Best Seller" className="md:w-10 w-6 sm:w-7" />
+                                </>
+                            ) : null}
+                        <p className='mr-3 ml-2 text-white bg-pink-400 rounded-full py-1 px-2'>sold: {selectedMenu?.sold}</p>
                     </div>
                 </div>
             </div>
-        )}</div>
+            </div>
+    )
+}</div >
     )
 }
 
