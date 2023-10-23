@@ -1,7 +1,6 @@
 import { createContext, useContext, useState } from "react";
 import { MenuItem } from "../../interface/interface";
 import NoFoodImage from '../../../public/img/NoFood.jpg';
-import BestSeller from '../../../public/icons/BestSeller.png';
 import Close from "../../../public/icons/close.svg"
 
 interface ModalContextProps {
