@@ -87,7 +87,7 @@ function ModalMenu() {
                                 <div className='flex items-center justify-end w-1/2'>
                                     <span className='fullprice-linethrough mr-2 ml-3'>{selectedMenu?.fullPrice}฿</span>
                                     {selectedMenu?.discountedPercent !== undefined ? (
-                                        <div className='mt-3 flex sm:items-center sm:mt-0 md:mt-2 xl:mt-3 2xl:mt-0'>
+                                        <div className='mt-3 flex items-center sm:mt-0 md:mt-2 xl:mt-3 2xl:mt-0'>
                                             <p className='discount xl:text-xl text-base'>{((100 - selectedMenu?.discountedPercent) / 100) * selectedMenu?.fullPrice}฿</p>
                                             <p className='discount ml-2 text-xs xl:text-base break-words underline'>{selectedMenu?.discountedTimePeriod.begin} - {selectedMenu?.discountedTimePeriod.end} Only</p>
                                         </div>
